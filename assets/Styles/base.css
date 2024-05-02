@@ -425,6 +425,98 @@ nav ul
     height: 420px;
 }
 #map {
-    height: 400px; /* ajusta la altura según sea necesario */
+    height: 70px; /* ajusta la altura según sea necesario */
     width: 525px; /* asegúrate de que el mapa ocupe todo el ancho disponible */
 }
+
+.my-experience-container h3
+{
+    text-align: center;
+    font-size: 40px;
+    font-family: var(--font-main);
+    font-weight: 700;
+    z-index: 2;
+    
+    
+
+}
+.p-1
+{
+    font-size: 17px;
+    font-family: var(--font-main);
+    font-weight: 500;
+
+    
+    
+    
+
+}
+.my-experience-container
+{
+    position: relative;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 15px 105px;
+    gap: 25px;
+    align-items: center;
+}
+.my-experience-container-img
+{
+    
+    width: 700px;
+    
+}
+
+
+.p-2{
+    
+    text-align: center;
+    font-size: 34px;
+    font-family: var(--font-main);
+    font-weight: 700;
+    color: white;
+    
+    
+
+}
+.my-experience-container2 img{
+    width: 550px;
+    height: 280px;
+    margin-left: 30px;
+    border-radius: 25px;
+}
+.my-experience-container2
+{
+    
+    display: grid;
+    grid-template-columns: 50% 45%;
+    grid-template-rows: 320px;
+    margin: 45px 35px;
+    gap: 25px;
+    align-items: center;
+    background-color: black;
+}
+.my-experience-container3
+{
+    margin-top:80px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    justify-content: center;
+    margin-left: 110px;
+    gap: 25px;
+    align-items: center;
+
+}
+.my-experience-container3 p
+{
+
+    
+    text-align: center;
+    font-size: 34px;
+    font-family: var(--font-main);
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    
+    
+}
+
