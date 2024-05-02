@@ -426,5 +426,5 @@ nav ul
 }
 #map {
     height: 400px; /* ajusta la altura según sea necesario */
-    width: 100%; /* asegúrate de que el mapa ocupe todo el ancho disponible */
+    width: 525px; /* asegúrate de que el mapa ocupe todo el ancho disponible */
 }
