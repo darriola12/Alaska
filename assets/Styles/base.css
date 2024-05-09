@@ -705,4 +705,68 @@ footer
     justify-content: center;
     align-items: center;
 }
+
+.snow
+{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 0.2;
+    left: -20%;
+    top: 10%;
+}
+.snow1
+{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 0.2;
+    left: -5%;
+    top: -10%;
+}
+.snow2
+{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 0.2;
+    left: 0%;
+    top: 18%;
+}
+.snow3
+{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 0.2;
+    left: -10%;
+    top: 50%;
+}
+.snow4
+{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 0.2;
+    left: 10%;
+    top: 0%;
+}
+.snow5
+{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 0.2;
+    left: 10%;
+    top: 40%;
+}
+.snow6
+{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 0.2;
+    left: 20%;
+    top: 60%;
+}
   
