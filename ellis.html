@@ -22,80 +22,6 @@
     <meta property = "og:image"  content="https://www.trafalgar.com/media/sh0hk3je/majestic-alaska-guided-tour-1.jpg?crop=0%2C0.2%2C0%2C0.05&cropmode=percentage&format=webp&mode=crop&width=1200&height=600&quality=80"> 
     <meta property = "og: url" content="#">
 
-
-    <!-- APIS -->
-    
-    <script>
-        (g => {
-            var h, a, k, p = "The Google Maps JavaScript API",
-                c = "google",
-                l = "importLibrary",
-                q = "__ib__",
-                m = document,
-                b = window;
-            b = b[c] || (b[c] = {});
-            var d = b.maps || (b.maps = {}),
-                r = new Set,
-                e = new URLSearchParams,
-                u = () => h || (h = new Promise(async (f, n) => {
-                await (a = m.createElement("script"));
-                e.set("libraries", [...r] + "");
-                for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
-                e.set("callback", c + ".maps." + q);
-                a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
-                d[q] = f;
-                a.onerror = () => h = n(Error(p + " could not load."));
-                a.nonce = m.querySelector("script[nonce]")?.nonce || "";
-                m.head.append(a)
-            }));
-            d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n))
-        })({
-            key: "AIzaSyAfGDI6Knsvvyz6HtL3m2wSX4gBZXl4hu4",
-            v: "weekly",
-            // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
-            // Add other bootstrap parameters as needed, using camel case.
-        });
-
-        let map;
-        let directionsService;
-        let directionsRenderer;
-
-        async function initMap() {
-            const { Map } = await google.maps.importLibrary("maps");
-
-            map = new Map(document.getElementById("map"), {
-                center: { lat: 39.8283, lng: -98.5795 }, // Centered in the US by default
-                zoom: 3,
-            });
-
-            directionsService = new google.maps.DirectionsService();
-            directionsRenderer = new google.maps.DirectionsRenderer();
-            directionsRenderer.setMap(map);
-
-            calculateAndDisplayRoute();
-        }
-
-        function calculateAndDisplayRoute() {
-            const start = "San Jose, Costa Rica";
-            const end = "Kenai, Alaska";
-            const request = {
-                origin: start,
-                destination: end,
-                travelMode: google.maps.TravelMode.DRIVING,
-            };
-            directionsService.route(request, (result, status) => {
-                if (status === google.maps.DirectionsStatus.OK) {
-                    directionsRenderer.setDirections(result);
-                } else {
-                    console.error("Error:", status);
-                }
-            });
-        }
-    </script>
-
-    
-
-
     <!-- Title   -->
 
     <title>Alaska Trip</title>
@@ -161,16 +87,17 @@
                     <h3 class="expanding-heading">About Alena</h3>
                     <div>
                         <div class="expanding-images">
-                            <img class="expanded-image" src="assets/Images/alena2.png"">
+                            <img class="expanded-image" src="assets/Images/alena2.png" alt="alena">
                             <img  class="expanded-image1" src="assets/Images/alena3.jpg" alt="alena">
-                            <img  class="expanded-image" src="assets/Images/alena4.jpg" alt="alena">
+                            <img  class="expanded-image" src="assets/Images/alena2.jpg" alt="alena">
                         </div>
-                        <p class="expanding-p">Alena was one of my best friends during my stay in Alaska, I remember first day she and her friends made a big concert upstairs. <br> 
-                        she is the youngest daugther of the family, her room was front of mine, one day at the mind of the night I put a tiny pillow front of her door rooms and I knocked the door and then run away <br>
-                        of course that action was like a war called for her and she did the same until it finish with a mountain of pillows front of her door room <br>
-                        she was always trying people with love and kindness, and has a different way to try the people she fell in love with, most part of my nights upstairs was giving Alena love advises <br>
-                        We started to watch an anime called your lie in april, of course she liked, that was my favorite anime. she is really good at cooking cookies. <br>
-                        during those  boring nights she was there as my little friend. </p>
+                        <p class="expanding-p">
+                            Alena holds a special place in my heart from my time in Alaska. I'll never forget the first day we met, when she and her friends decided to host an impromptu concert upstairs. She's the youngest daughter of the family, and her room was conveniently located right across from mine. One night, in the middle of the night, I decided to play a harmless prank on her. I placed a tiny pillow in front of her door, knocked, and then dashed away. Little did I know, it sparked a pillow war between us that ended with a mountain of pillows in front of her door.
+
+                            Alena has a unique way of showering people with love and kindness, and she's equally unique in how she expresses her affection for those she cares about. Many of my nights were spent upstairs, offering Alena love advice as she navigated matters of the heart. And let me tell you, she's a wizard in the kitchen when it comes to baking cookies.
+                            
+                            During those seemingly endless, boring nights, Alena was always there as my little sister, bringing joy and laughter to even the dullest moments.
+                        </p>
                     </div>
                     
                 </div>
@@ -179,39 +106,139 @@
                     <p class="family" >Ethan</p>
                 </div>
                 <div class="expanded-image-container-ethan">
-                    <span class="close-btn">X</span>
+                    <span class="close-btn-ethan">X</span>
                     <h3 class="expanding-heading">About Ethan</h3>
-                    <div>
-                        <div class="expanding-images">
-                            <img class="expanded-image" src="assets/Images/alena2.png"">
-                            <img  class="expanded-image1" src="assets/Images/alena3.jpg" alt="alena">
-                            <img  class="expanded-image" src="assets/Images/alena4.jpg" alt="alena">
-                        </div>
-                        <p class="expanding-p">Ethan is my other best friend in Alaska,  </p>
+                    <div class="expanded-con">
+                        
+                            <div class="expanding-images">
+                                <img id="e-i-1" class="expanded-image" src="assets/Images/ethan2.jpg" alt="ethan">
+                                <img id="e-i-2" class="expanded-image"src="assets/Images/ethan3.jpg" alt="ethan">
+                                <img id="e-i-3" class="expanded-image" src="assets/Images/ethan4.jpg" alt="ethan">
+                            </div>
+                            <p class="expanding-p">
+                                Ethan is my other best friend from Alaska, and he's a sixteen-year-old guy with a heart of gold. The first time I met him, he was quiet and introverted, but he showed kindness towards me from the start. My goal was to build a strong friendship with him, and it didn't take long for us to hit it off.
+                                A couple of weeks later, we ventured outside for the first time to play football. Ethan absolutely loves football and dreams of becoming a star quarterback and playing in college. I have no doubt he can achieve it, although he probably already knows it won't be easy. He enjoys spending time outdoors, especially with his buddies Walter, Wyatt, and his other friends.
+                                Every time I snuck into the kitchen for a late-night snack, Ethan was always there, glued to the TV. I guess I never managed to grab my snack because I was too embarrassed to disturb him.
+                                I came to Alaska during the season of love, as both Alena and Ethan had fallen for someone. Many nights were spent upstairs, chatting about the rollercoaster of emotions that comes with love. Ethan has a heart of gold, and I feel grateful to have met such an awesome guy."
+                            </p>
+                        
+                    </div>
+                </div>
+                <div class="ellis-card">
+                    <img id="brant_img" src="assets/Images/Jen&Brant.png" alt="">
+                    <p class="family1" >Brant & Jen</p>
+                </div>
+                <div class="expanded-image-container-brant">
+                    <span class="close-btn-brant">X</span>
+                    <h3 class="expanding-heading">About Brant & Jen </h3>
+                    <div class="expanded-con">
+                        
+                            <div class="expanding-images">
+                                <img id="e-i-4" class="expanded-image"  src="assets/Images/brant2.jpg" alt="branden">
+                                <img id="e-i-5" class="expanded-image" src="assets/Images/brant5.jpg" alt="branden">
+                                <img id="e-i-6" class="expanded-image" src="assets/Images/brant4.jpg" alt="branden">
+                                
+                            </div>
+                            <p class="expanding-p">
+                                Those two incredible souls you see in the picture are Brant and Jen, and let me tell you, they have hearts of gold. When I first arrived in Alaska, winter was slowly bidding farewell, but Brant made sure to brighten my mornings before heading to the shop. No matter where he was, he managed to bring a smile to my face. Brant is passionate about his work and excels in business. I'm certain he instills the values of hard work and diligence in his children. He's also a bit of a car enthusiast, but above all, his love and dedication to his family always shine through.
+
+                                And then there's Jen, Brant's wonderful wife. Let me tell you, her heart is as big as the Alaskan wilderness. Throughout my stay in Alaska, she was my pillar of support, always ready to lend a helping hand and shower me with love. She was like a second mother to me during those days. Jen has a passion for Zumba and is quite the pro at it. Her love for her family knows no bounds, and she's always there to take care of them.
+                                
+                                I'll never forget the time I fell ill after work and stumbled back to their house. Jen nursed me back to health all through the night, and the next morning, I found a little cup with pills and my name on it. It may have been a simple gesture, but it brought tears to my eyes. I felt an overwhelming amount of love from her.
+                                
+                                Saying goodbye to Brant and Jen was one of the hardest things I've ever had to do, but I know wherever they go, they continue to spread love and kindness, touching the lives of everyone they meet.
+                            </p>
+                        
                     </div>
                     
                 </div>
                 <div class="ellis-card">
-                    <img src="assets/Images/Jen&Brant.png" alt="">
-                    <p class="family1" >Brant & Jen</p>
-                </div>
-                <div class="ellis-card">
-                    <img src="assets/Images/Camry.png" alt="">
+                    <img id="camry_img" src="assets/Images/Camry.png" alt="">
                     <p class="family">Camry</p>
                 </div>
-                <div class="ellis-card">
-                    <img src="assets/Images/Garret.png" alt="">
-                    <p class="garret-p">Garret & <br> Carlieann</p>
+                <div class="expanded-image-container-Camry">
+                    <span class="close-btn-camry">X</span>
+                    <h3 class="expanding-heading">About Camry</h3>
+                    <div class="expanded-con">
+                        
+                            <div class="expanding-images">
+                                <img id="e-i-7" class="expanded-image"  src="assets/Images/camry2.jpg" alt="branden">
+                                <img id="e-i-8" class="expanded-image" src="assets/Images/camry3.jpg" alt="branden">
+                                <img id="e-i-9" class="expanded-image" src="assets/Images/camry5.jpg" alt="branden">
+                            </div>
+                            <p class="expanding-p">
+                                Camry is the quintessential middle child of the family, and let me tell you, she's a force to be reckoned with. I worked alongside her every day, and I can say with confidence that she's an incredible woman. Like Brant, she's also crazy about cars and once owned a beautiful Mustang.
+
+                                I'll never forget the time we went to see a theater play based on Aladdin, and Camry portrayed Jasmine. At first, I was skeptical because I had seen Aladdin plays before, and they were rather dull. But this one was a whole different ballgame. Camry was ridiculously awesome; her performance and the special effects left me in awe.
+                                
+                                Aside from her passion for cars and acting, Camry also has a love for volleyball. I never told her, but I secretly wanted to join her in a game because I love volleyball too. Perhaps due to both of us being young individuals living in our own worlds, we didn't form a particularly strong bond. However, she was always there to lend a helping hand with my work and offer support. This woman holds a special place in my heart.
+                            </p>
+            
+                    </div>
+                    
                 </div>
                 <div class="ellis-card">
-                    <img src="assets/Images/Braden.png" alt="">
+                    <img id="garret_img" src="assets/Images/Garret.png" alt="">
+                    <p class="garret-p">Garret & <br> Carlieann</p>
+                </div>
+                <div class="expanded-image-container-garret">
+                    <span class="close-btn-garret">X</span>
+                    <h3 class="expanding-heading">About Garret & Carlieann</h3>
+                    <div class="expanded-con">
+                        
+                            <div class="expanding-images">
+                                <img id="e-i-10" class="expanded-image"  src="assets/Images/garret2.jpg" alt="branden">
+                                <img id="e-i-11" class="expanded-image" src="assets/Images/garret3.jpg" alt="branden">
+                                <img id="e-i-12" class="expanded-image" src="assets/Images/garret4.jpg" alt="branden">
+                            </div>
+                            <p class="expanding-p"> 
+                                
+                             Garret was another one of my closest friends, serving not just as a mentor and boss, but as a true older brother figure. He arrived in Alaska just a week after I did, and to my surprise, he spoke Spanish! I grew to appreciate Garret immensely, especially for his infinite patience with me at work.
+                             
+                             I vividly recall those initial days on the job when he generously treated me to lunch, until he realized that continuing to do so might lead us straight to bankruptcy! Despite his quiet demeanor, Garret was full of fun ideas and had an unwavering love for his brothers. He was also on the verge of marrying Carlieann, a sweet and kind-hearted girl with a passion for running. I don't know her secret, but she could run for miles on end, and when I say a lot, I mean a lot!
+                             
+                             Garret, to me, was more than just a friend; he was an older brother from whom I learned countless valuable lessons. He might not have been aware, but I always looked up to him, seeing a radiant Christ-like light shining from his face.
+                            </p>
+
+                    </div>
+                    
+                </div>
+                <div class="ellis-card">
+                    <img id="braden_img" src="assets/Images/Braden.png" alt="">
                     <p class="family">Branden</p>
+                </div>
+                <div class="expanded-image-container-branden">
+                    <span class="close-btn-branden">X</span>
+                    <h3 class="expanding-heading">About Branden</h3>
+                    <div class="expanded-con">
+                       
+                            <div class="expanding-images">
+                                <img id="e-i-13" class="expanded-image"  src="assets/Images/branden2.jpg" alt="branden">
+                                <img id="e-i-14" class="expanded-image" src="assets/Images/branden3.jpg" alt="branden">
+                                <img id="e-i-15" class="expanded-image" src="assets/Images/brande4.jpg" alt="branden">
+                            </div>
+                            <p class="expanding-p"> 
+                                Branden, the eldest son of the family, left quite the impression on me from the moment we met. Though our time together was limited, I quickly noticed his kind heart and impressive cooking skills. He's passionate about two things: cars and girls. I often joked that I should have asked him for flirting advice because he seemed to have it all figured out!
+
+                                One memorable experience was when we both attended the Single Adults class in the stake. Though we left feeling a tad disappointed, it was a blast meeting new people with him by my side. Branden also became my go-to basketball buddy. We'd hit the court together from time to time, and let me tell you, it was always a riot.
+                                
+                                He's the type of guy who loves to embark on crazy and cool adventures, things that I probably wouldn't dare to do myself. I have no doubt that Branden has a bright future ahead of him.
+                                
+                            </p>
+                    </div>
+                    
+                    
                 </div>
             </div>
         </div>
         
         
         <script src="scripts/expand.js"></script>
+
+
+        <footer>
+
+        </footer>
 
 
     </main>
