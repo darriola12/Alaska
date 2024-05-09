@@ -718,8 +718,8 @@ footer
 .snow1
 {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 140px;
+    height: 140px;
     opacity: 0.2;
     left: -5%;
     top: -10%;
@@ -727,8 +727,8 @@ footer
 .snow2
 {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 140px;
+    height: 150px;
     opacity: 0.2;
     left: 0%;
     top: 18%;
@@ -736,8 +736,8 @@ footer
 .snow3
 {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     opacity: 0.2;
     left: -10%;
     top: 50%;
@@ -754,8 +754,8 @@ footer
 .snow5
 {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     opacity: 0.2;
     left: 10%;
     top: 40%;
