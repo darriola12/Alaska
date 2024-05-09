@@ -634,19 +634,19 @@ nav ul
     margin-left: 40px;
 }
 
+/* Style all font awesome icons */
 .fa {
     padding: 20px;
-    font-size: 30px;
-    width: 30px;
+    font-size: 40px;
+    width: 50px;
     text-align: center;
     text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
-}
+  }
   
-.fa:hover {
-      opacity: 0.7;
-}
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
   
 .fa-facebook {
     background: #3B5998;
@@ -662,5 +662,47 @@ nav ul
     color: white;
 }
 
-  
+.footer-text1
+{
+    
+    font-family: var(--font-main);
+    font-weight: 800;
+    font-size: 40px;
+    margin-bottom: 0;
+
+
+}
+
+.footer-text
+{
+    text-align: center;
+}
+.footer-list a
+{
+    text-decoration: none;
+    color: black;
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: 20px;
+    
+    
+
+
+}
+.footer-list
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+footer
+{
+    margin-top: 60px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    justify-content: center;
+    align-items: center;
+}
   
