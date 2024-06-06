@@ -105,10 +105,29 @@
         display: flex;
         flex-direction: column;
     }
-    .expanding-images
+    .expanded-image, .expanded-image1, .expanded-image
     {
         display: none;
     }
+    .expanding-p
+    {
+        width: 350px;
+        font-size: 12px;
+    }
+    .expanding-heading
+    {
+        text-align: center;
+        width: 350px;
+    }.close-btn, .close-btn-ethan, .close-btn-brant, .close-btn-camry, .close-btn-garret, .close-btn-branden
+    {
+        top: 20px;
+        right: 20%;
+    }
+    .expanded-image-container
+    {
+        width: 450px;
+    }
+
     
     
 
